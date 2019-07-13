@@ -13,8 +13,8 @@ thought about a good name that can combine DOMs and JS, so came with the Damje "
 - [ ] merge files
 - [ ] refactor duplicated
 - [ ] write docs
-- [ ] generate a library
-- [ ] create toolbar
+- [ ] generate a library 
+- [ ] create toolbar ref: https://www.w3schools.com/howto/howto_js_sidenav.asp
 - [ ] export/import data
 - [ ] icons change
 
