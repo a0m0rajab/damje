@@ -15,5 +15,8 @@ thought about a good name that can combine DOMs and JS, so came with the Damje "
 - [ ] write docs
 - [ ] generate a library
 - [ ] create toolbar
+- [ ] export/import data
+- [ ] icons change
+
 
 
