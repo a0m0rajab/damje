@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+                initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>الطاقة الشمسية عبر العقود</title>
+    <link rel="stylesheet" href="timeLineRTL.css">
+    <script src="damje.js"></script>
+</head>
+
+<body>
+
+    <div class="timeline">
+
+    </div>
+    <script>
+        let source = []
+        let url = "https://spreadsheets.google.com/feeds/cells/1j80WA5pCh1FbyEzMbOIcWqoEHsHXC-ylOSwoMmiQeXM/od6/public/values?alt=json"
+
+        function readLinkData(url) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open('GET', url, true);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        var obj = JSON.parse(xmlhttp.responseText);
+                        entry = obj.feed.entry
+                        for (i = 2; i < entry.length; i += 2)
+                            source.push([entry[i].content.$t, entry[i + 1].content.$t]);
+                        createAlternate("left", source);
+                    }
+                }
+            };
+            xmlhttp.send(null);
+        }
+
+
+        readLinkData(url);
+
+
+        // w3school css timeline
+        //
+    </script>
+</body>
+
+</html>
